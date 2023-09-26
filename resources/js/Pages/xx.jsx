@@ -7,11 +7,8 @@ import { Link } from "@inertiajs/react";
 import Home from "@/Layouts/Home";
 import { useState } from "react";
 
-export default function xx(props) {
-    // let flash = usePage().props.flash;
-    // console.log(flash);
-    let users = usePage().props.users;
-    const list_users = users.map((user) => <li>{user.name}</li>);
+export default function xx({ auth, userx }) {
+    // const list_users = userx.map((user) => <li>{user.name}</li>);
 
     const { component, url } = usePage();
     console.log({ component, url });
@@ -20,6 +17,9 @@ export default function xx(props) {
     const handleChange = (e) => {
         setQuery(e.target.value);
     };
+
+    // console.log({ userx });
+
     return (
         <>
             <Link
@@ -40,7 +40,7 @@ export default function xx(props) {
                 <b>The lists of users : </b>
             </p>
             {/* <ul>{list_users}</ul> */}
-            <PaginatedItems itemsPerPage={4}>
+            <PaginatedItems data={userx} itemsPerPage={10}>
                 <Head title="Welcome" />
                 <h1>Welcome </h1>
             </PaginatedItems>

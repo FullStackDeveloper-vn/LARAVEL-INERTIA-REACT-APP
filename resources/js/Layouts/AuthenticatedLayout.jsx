@@ -28,6 +28,12 @@ export default function Authenticated({ auth, header, children }) {
                                 >
                                     Dashboard
                                 </NavLink>
+                                <NavLink
+                                    href={route("inertia.index")}
+                                    active={route().current("inertia.index")}
+                                >
+                                    xx
+                                </NavLink>
                             </div>
                         </div>
 

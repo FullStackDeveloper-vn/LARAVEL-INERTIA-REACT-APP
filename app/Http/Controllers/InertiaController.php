@@ -15,15 +15,18 @@ class InertiaController extends Controller
 {
     public function index()
     {
+        // return Organization::all();
+        $users = Organization::all();
         return Inertia::render('xx', [
-            'users' => User::all()->map(function ($user) {
-                return [
-                    'user_id' => $user->id,
-                    'name' => $user->name,
-                    'email' => $user->email,
-                    // 'edit_url' => route('users.edit', $user),
-                ];
-            }),
+            'userx' => $users
+            // 'users' => User::all()->map(function ($user) {
+            //     return [
+            //         'user_id' => $user->id,
+            //         'name' => $user->name,
+            //         'email' => $user->email,
+            //         // 'edit_url' => route('users.edit', $user),
+            //     ];
+            // }),
             // 'create_url' => route('users.create'),
         ]);
     }
