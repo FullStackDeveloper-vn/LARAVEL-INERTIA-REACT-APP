@@ -16,7 +16,7 @@ class InertiaController extends Controller
     public function index()
     {
         // return Organization::all();
-        $users = Organization::all();
+        $users = User::all();
         return Inertia::render('xx', [
             'userx' => $users
             // 'users' => User::all()->map(function ($user) {

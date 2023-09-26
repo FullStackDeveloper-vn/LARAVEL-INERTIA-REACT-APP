@@ -9,7 +9,7 @@ function Items({ currentItems }) {
             {currentItems &&
                 currentItems.map((item) => (
                     <div key={item.id}>
-                        <h3>{item.city}</h3>
+                        <h3>{item.name}</h3>
                     </div>
                 ))}
         </div>

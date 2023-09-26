@@ -10,7 +10,7 @@ export default function Layout({ children }) {
                 <Link href="/about">About</Link>
                 <Link href="/contact">Contact</Link>
             </header>
-            <article>{children}</article>
+            <article id="layout_article">{children}</article>
         </main>
     );
 }
